@@ -1,18 +1,21 @@
 import './style.css'
+import iconHamburger from './assets/images/icon-hamburger.svg'
+import iconClose from './assets/images/icon-close.svg'
 
-const buttonMenu = document.querySelector('.btn-hamburguer')
+
+const buttonMenu = document.querySelector('.btn-menu')
 const navMenu = document.querySelector('.nav-menu')
-const iconHamburguer = document.querySelector('.icon-hamburguer')
+const iconMenu = document.querySelector('.icon-menu')
 
 buttonMenu.addEventListener('click', () => {
   if (navMenu.classList.contains('hidden')) {
     navMenu.classList.remove('hidden')
     navMenu.classList.add('flex')
-    iconHamburguer.setAttribute('src', 'src/assets/images/icon-close.svg')
+    iconMenu.src = iconClose;
   } else {
     navMenu.classList.add('hidden')
     navMenu.classList.remove('flex')
-    iconHamburguer.setAttribute('src', 'src/assets/images/icon-hamburger.svg')
+    iconMenu.src = iconHamburger;
   }
 
 }) 
